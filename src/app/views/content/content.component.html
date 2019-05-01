@@ -1,28 +1,15 @@
-<nav class="navbar navbar-light w-25">
-  <div class="container">
+<div class="d-flex">
 
-    <ul class="nav navbar-nav pull-xs-right">
+  <div class="navbar navbar-light w-25 flex-center justify-content-start">
 
-      <li class="nav-item">
-        <a class="nav-link"
-          routerLink="/">
-          Home
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link">
-          Sign in
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link">
-          Sign up
-        </a>
-      </li>
-
-    </ul>
-
+    <p class="flex w-100 p-1" *ngFor="let cat of categories">
+      <span class="list-item"> {{cat}} </span>
+    </p>
   </div>
-</nav>
+
+  <div class="mid-section-content w-75 justify-content-end px-3 p">
+    <p class="jumbotron young-passion-gradient   text-center">
+      PHUMLA MANJE
+    </p>
+  </div>
+</div>
