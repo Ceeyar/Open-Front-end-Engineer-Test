@@ -1,12 +1,15 @@
 <div class="page-content">
+  <div class="top-section">
   <app-header class=""></app-header>
-  <div>
     <p class="welcome-title">
       When Thanos goes to sleep every night, he checks his closet for Chuck Norris!
     </p>
   </div>
-  <p class="jokes-cat pt-5 mb-2"> More Jokes by category: </p>
-  <app-content></app-content>
-  <footer></footer>
+ <div class="mid-section mb-3">
+    <p class="jokes-cat pt-5 mb-2 pl-3"> More Jokes by category: </p>
+    <app-content></app-content>
+ </div>
+  <div class="lower-section">
+  <footer class="pt-5" style="background: red"></footer></div>
 </div>
 <router-outlet></router-outlet>
