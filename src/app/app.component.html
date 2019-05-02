@@ -1,8 +1,8 @@
 <div class="page-content">
   <div class="top-section">
-    <app-header class=""></app-header>
+    <app-header class="" (jokeToEmit)="getJoke($event)"></app-header>
     <p class="welcome-title">
-      When Thanos goes to sleep every night, he checks his closet for Chuck Norris!
+      {{titleJoke}}
     </p>
   </div>
   <div class="mid-section mb-3">
