@@ -10,20 +10,21 @@ import { HttpClient } from "@angular/common/http";
 })
 export class JokeService {
 
+    jokeUrl = "https://api.chucknorris.io/jokes";
     constructor(private http: HttpClient) {}
 
     // HTTP request, get Categories:
     fetchCategories():Observable<string[]> {
-        return this.http.get<string[]>('https://api.chucknorris.io/jokes/categories');
+        return this.http.get<string[]>(this.jokeUrl + '/categories');
     }
 
     // HTTP request, get joke by Category:
     fetchJokeByCategory(cat: string):Observable<any> {
-        return this.http.get<Joke>('https://api.chucknorris.io/jokes/random?category='+ cat);
+        return this.http.get<Joke>(this.jokeUrl + '/random?category='+ cat);
     }
 
     // HTTP request, get a random joke:
     fetchRandomJoke():Observable<any> {
-        return this.http.get<Joke>('https://api.chucknorris.io/jokes/random');
+        return this.http.get<Joke>(this.jokeUrl + '/random');
     }
 }
