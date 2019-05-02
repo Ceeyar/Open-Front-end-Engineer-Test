@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
-import { JokeService } from 'src/app/services/joke-service';
-import { Observable, Subscription } from 'rxjs';
-import { Joke } from 'src/app/interfaces/joke';
+import { JokeService } from './../../services/joke-service';
+import { Subscription } from 'rxjs';
+import { Joke } from './../../interfaces/joke';
 
 @Component({
   selector: 'app-header',
