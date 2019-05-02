@@ -3,13 +3,21 @@
   <div class="navbar navbar-light w-25 flex-center justify-content-start">
 
     <p class="flex w-100 p-1" *ngFor="let cat of categories">
-      <span class="list-item"> {{cat}} </span>
+      <span class="list-item" (click)="tellJoke(cat)"> {{cat}} </span>
     </p>
   </div>
 
-  <div class="mid-section-content w-75 justify-content-end px-3 p">
-    <p class="jumbotron young-passion-gradient   text-center">
-      PHUMLA MANJE
-    </p>
+  <div class="mid-section-content w-75 justify-content-end px-3 ">
+    <div class="jumbotron young-passion-gradient text-center random-joke" *ngIf="(joke$) as joke; else noJokes">
+      <img src="{{joke.icon_url}}" />
+      <p class="text-left"> {{joke.category}}: </p>
+      <p> {{joke.value}} </p>
+    </div>
+    <ng-template #noJokes>
+      <div class="text-center random-joke">
+        <p> we don't tell Jokes unless asked, click a category for a joke</p>
+        <img src="./../../../assets/animated-arrow-left.gif" height="100" width="auto"/>
+      </div>
+    </ng-template>
   </div>
 </div>
