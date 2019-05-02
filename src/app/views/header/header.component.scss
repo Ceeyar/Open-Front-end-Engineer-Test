@@ -1,7 +1,25 @@
+@import './../../../assets/variables.scss';
+
 .nav a.white-text:hover {
-    color: #e0e0e0!important;
+    color: $white;
 }
 
 .top-nav {
     overflow-x: hidden;
 }
+
+.form-end {
+    position: absolute;
+    right: 0;
+    color: $white;
+}
+
+.active-pink input[type=text] {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+}
+
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+}    
