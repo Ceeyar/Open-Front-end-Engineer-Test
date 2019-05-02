@@ -23,3 +23,10 @@
     border-bottom: 1px solid #f48fb1;
     box-shadow: 0 1px 0 0 #f48fb1;
 }    
+
+@media only screen and (max-width: 768px) {
+    .mobile-search {
+        position: relative;
+        padding-left: 1rem;
+    }
+  }
